@@ -1,0 +1,170 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap");
+
+:root {
+  --primary-color: #c7217f;
+  --secondary-color: #fdf7fa;
+  --background-color: #f7f7f7;
+  --border-color: rgb(0 0 0 / 0.3);
+  --text-color: #000;
+  --link-color: white;
+  --success-color: #4ab54f;
+  --error-color: red;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  margin: 0;
+  background: var(--background-color);
+  font-family: "Open Sans", sans-serif;
+}
+
+button, input, textarea {
+  border: 1px solid var(--border-color);
+  border-radius: 3px;
+  font-size: 1rem;
+  font-family: "Open Sans", sans-serif;
+  outline: none;
+  padding: 10px;
+}
+
+input:hover, input:focus, textarea:hover, textarea:focus {
+  border-color: var(--primary-color);
+}
+
+textarea {
+  resize: vertical;
+}
+
+header {
+  background-color: var(--primary-color);
+}
+
+header ul {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  list-style: none;
+  margin: 0;
+  padding: 20px;
+}
+
+header a {
+  color: var(--link-color);
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.heading {
+  text-align: center;
+}
+
+.post, .post-list, .form form {
+  background: white;
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  border-radius: 3px;
+  padding: 30px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.post-list {
+  max-width: 600px;
+}
+
+.form form {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+label {
+  font-weight: bold;
+  margin-top: 7px;
+}
+
+label:first-child {
+  margin-top: 0;
+}
+
+button[type="submit"] {
+  background: var(--primary-color);
+  border-color: rgb(0 0 0 / 0.2);
+  color: var(--link-color);
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+button[type="submit"]:hover {
+  background: var(--secondary-color);
+  border-color: var(--primary-color);
+  color: var(--text-color);
+}
+
+.error input, .error textarea {
+  border-color: var(--error-color) !important;
+  outline: 1px solid var(--error-color);
+  outline-offset: 3px;
+}
+
+span.error-msg {
+  color: var(--error-color);
+  font-weight: 400;
+}
+
+.s-msg {
+  background: #edf8ed;
+  border: 1px solid #87ce8b;
+  border-radius: 3px;
+  color: var(--success-color);
+  padding: 10px;
+}
+
+.post-list table {
+  border-collapse: collapse;
+  text-align: center;
+  width: 100%;
+}
+
+.post-list table th, .post-list table td {
+  border: 1px solid rgb(0 0 0 / 0.1);
+  padding: 10px 5px;
+}
+
+.post-list table tbody tr:nth-child(odd) {
+  background: var(--secondary-color);
+}
+
+.post-list table tbody tr td:last-child a {
+  border: 1px solid rgb(0 0 0 / 0.3);
+  border-radius: 3px;
+  font-size: 14px;
+  margin: 0 3px;
+  padding: 0 3px;
+  text-decoration: none;
+}
+
+a.view-post {
+  color: inherit;
+}
+
+a.edit {
+  background-color: #f5f5ef;
+  color: var(--text-color);
+}
+
+a.del {
+  background-color: var(--primary-color);
+  color: var(--link-color);
+}
+
+.date span {
+  font-style: italic;
+  color: #777;
+}
